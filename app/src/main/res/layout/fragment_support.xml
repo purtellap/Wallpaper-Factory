@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:text="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/popup_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/header"
+            style="@style/fragmentToolbarStyle"
+            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/headerText"
+                android:text="@string/support"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/TextStyle"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_packs"
+                    android:padding="@dimen/fab_margin">
+
+                    <TextView
+                        android:id="@+id/supportThanks"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:text="@string/supportThanks"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:padding="@dimen/fab_margin"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/heart"
+                        app:layout_constraintBottom_toTopOf="@id/supportWhy"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/heart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:contentDescription="@string/imgDesc"
+                        android:src="@drawable/ic_heart_24"
+                        android:tint="@color/heart"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="64dp"
+                        app:layout_constraintStart_toEndOf="@id/supportThanks"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/supportWhy"
+                        />
+
+                    <TextView
+                        android:id="@+id/supportWhy"
+                        android:text="@string/supportWhy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/highlight"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:textSize="16sp"
+                        android:padding="@dimen/fab_margin"
+                        app:layout_constraintBottom_toTopOf="@id/supportDonate"
+                        />
+
+                    <TextView
+                        android:id="@+id/supportDonate"
+                        android:text="@string/supportDonate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@id/support5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:padding="@dimen/fab_margin"
+                        />
+
+                    <Button
+                        android:id="@+id/support1"
+                        android:layout_width="0dp"
+                        android:drawableStart="@drawable/ic_satisfied_24px"
+                        android:text="@string/support1"
+                        android:padding="@dimen/fab_margin"
+                        style="@style/buttonStyle"
+                        android:drawableTint="@color/highlight_solid"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/support5"
+                        />
+
+                    <Button
+                        android:id="@+id/support5"
+                        android:layout_width="0dp"
+                        android:drawableStart="@drawable/ic_mood_24px"
+                        android:text="@string/support5"
+                        android:padding="@dimen/fab_margin"
+                        style="@style/buttonStyle"
+                        android:drawableTint="@color/highlight_solid"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/support1"
+                        app:layout_constraintEnd_toStartOf="@id/support10"
+                        />
+
+                    <Button
+                        android:id="@+id/support10"
+                        android:layout_width="0dp"
+                        style="@style/buttonStyle"
+                        android:drawableStart="@drawable/ic_very_satisfied_24px"
+                        android:text="@string/support10"
+                        android:padding="@dimen/fab_margin"
+                        android:drawableTint="@color/highlight_solid"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/support5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

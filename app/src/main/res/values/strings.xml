@@ -1,0 +1,163 @@
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation" >
+
+    <string name="app_name">Wallpaper Factory</string>
+    <string name="img_directory">wallpaperfactory</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_preview">Preview</string>
+
+    <!-- Nav Bar -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_imgDesc">Image</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_Preview">Preview</string>
+    <string name="nav_Home">Home</string>
+    <string name="nav_Edit">Edit Wallpaper</string>
+    <string name="nav_Background">Background</string>
+    <string name="nav_Foreground">Objects</string>
+    <string name="nav_More">More</string>
+    <string name="nav_Library">Image Library</string>
+    <string name="nav_Upgrade">Object Packs</string>
+    <string name="nav_About">About</string>
+    <string name="nav_Help">Help</string>
+    <string name="nav_Support">Show Support</string>
+
+    <!-- Home -->
+    <string name="welcome">Welcome to Wallpaper Factory</string>
+    <string name="homeDesc">Check out these presets to get started, or go straight to making your own wallpaper!</string>
+    <string name="presetClassic">The classic</string>
+    <string name="presetBalls">Bouncy Balls</string>
+
+    <!-- Foreground -->
+    <string name="size">Size</string>
+    <string name="speed">Speed</string>
+    <string name="angle">Angle</string>
+    <string name="done">Done</string>
+    <string name="checkbox">True</string>
+    <string name="cancel">Cancel</string>
+    <string name="uploadImg">Upload New Image</string>
+    <string name="choose">Choose from image library</string>
+    <string name="library">Manage image library</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="back">Back</string>
+    <string name="upload">Upload</string>
+
+    <!-- Edit Object -->
+    <string name="foreground">Objects</string>
+    <string name="headerText">Object Settings</string>
+    <string name="imgDesc">Image</string>
+    <string name="shapeButton">WF Icons</string>
+    <string name="imgButton">Image Library</string>
+    <string name="useColor">Use Color</string>
+    <string name="changeOnBounce">Change On Bounce</string>
+    <string name="objSize" formatted="true" translatable="false">%d%%</string>
+    <string name="objVelocity" formatted="true" translatable="false">%d%%</string>
+    <string name="objAngle" formatted="true" translatable="false">%d°</string>
+    <string name="saveButton">Save</string>
+    <string name="copy">Copy</string>
+    <string name="colorSubText">Tap center to reset</string>
+    <string name="useGravity">Gravity</string>
+    <string name="useShadow">Shadow</string>
+    <string name="flipX">Flip on X Bounce</string>
+    <string name="flipY">Flip on Y Bounce</string>
+
+    <!-- Background -->
+    <string name="setColor">Color</string>
+    <string name="setImage">Image</string>
+    <string name="setGif">Gif</string>
+    <string name="setVideo">Video</string>
+    <string name="preview">Preview</string>
+    <string name="bkgSize" formatted="true" translatable="false">%d%%</string>
+    <string name="bkgInfoTitle">For making high quality backgrounds</string>
+    <string name="bkgInfoDesc">The resolution of your phone is:</string>
+    <string name="bkgInfoDesc2">pixels</string>
+    <string name="bkgInfoOK">Thanks</string>
+    <string name="videoAlertTitle">Video incompatibility</string>
+    <string name="videoAlert">Unfortunately, if you use a video the foreground objects will not be rendered.  If you want to use your videos with objects, please convert to GIF. Sorry for the inconvenience!</string>
+
+    <!-- Library -->
+    <string name="clearTitle">Clear All?</string>
+    <string name="clearDesc">If you delete these, the objects that use them will no longer work. This will not delete the images from your photos.</string>
+    <string name="clearVidDesc">If your wallpaper is using a video, it will no longer work. This will not delete the videos from your photos.</string>
+    <string name="delTitle">Delete this image?</string>
+    <string name="delDesc">If you delete an image, the objects that use it will no longer work. This will not delete the original image from your photos.</string>
+    <string name="delGifTitle">Delete this gif?</string>
+    <string name="delGifDesc">If your wallpaper is using this gif, it will no longer work. This will not delete the original gif from your photos.</string>
+    <string name="delVidTitle">Delete this video?</string>
+    <string name="delVidDesc">If your wallpaper is using this video, it will no longer work. This will not delete the original video from your photos.</string>
+    <string name="yes">Yes</string>
+    <string name="OK">Okay</string>
+    <string name="defaultImgs">Defaults and Icon Packs</string>
+    <string name="storedInfo">These images are stored on your phone.  They are not uploaded to the cloud or seen by the developer/third parties.</string>
+    <string name="storedGifInfo">These gifs are stored on your phone.  They are not uploaded to the cloud or seen by the developer/third parties.</string>
+    <string name="storedVidInfo">These videos are stored on your phone.  They are not uploaded to the cloud or seen by the developer/third parties.</string>
+    <string name="videoLib">Video Library</string>
+    <string name="gifLib">Gif Library</string>
+
+    <!-- Toasts -->
+    <string name="toastBkgSet">Background Set</string>
+    <string name="toastImgRemoved">Image Removed</string>
+    <string name="toastImgsRemoved">Images Removed</string>
+    <string name="toastGifRemoved">Gif Removed</string>
+    <string name="toastGifsRemoved">Gifs Removed</string>
+    <string name="toastVidRemoved">Video Removed</string>
+    <string name="toastVidsRemoved">Videos Removed</string>
+    <string name="toastNoneSelected">No Image Selected</string>
+    <string name="toastNoGifSelected">No Gif Selected</string>
+    <string name="toastNoVidSelected">No Video Selected</string>
+    <string name="toastDenied">Permission Denied</string>
+    <string name="toastFail">Something went wrong :(</string>
+    <string name="toastPackFail">Error loading packs</string>
+    <string name="toastPackLocked">This icon is locked! Unlock in Packs tab</string>
+
+    <!-- Upgrade -->
+    <string name="upgradeUnlock">Unlock Cool Packs</string>
+    <string name="buy">Get</string>
+    <string name="use">Use</string>
+    <string name="price">$1.99</string>
+
+    <!-- Help -->
+    <string name="scroll">scroll</string>
+    <string name="helpFAQ">FAQ</string>
+    <string name="helpQ1">Why is this app taking up so much space?</string>
+    <string name="helpA1">Everything you upload to this app\'s library is stored on your phone, so it will take up more space the more you upload.</string>
+    <string name="helpQ2">Why are GIFS taking so long to load?</string>
+    <string name="helpA2">The GIF file type is not meant for high quality video content, so it is actually less efficient than an MP4 filetype.  GIF files will probably be larger in size than their MP4 counterparts, and so may take longer to load.</string>
+
+    <!-- About -->
+    <string name="about">About</string>
+    <string name="aboutDev">Developer</string>
+    <string name="aboutAustin">Austin Purtell</string>
+    <string name="aboutCredit">Based on a project by:</string>
+    <string name="aboutSam">Sam Ferguson</string>
+    <string name="aboutMike">Michael Walling</string>
+    <string name="aboutLibs">Software Credits</string>
+    <string name="aboutHolo">HoloColorPicker</string>
+    <string name="aboutHolo2">by Lars Werkman</string>
+    <string name="aboutSource">Source</string>
+    <string name="aboutLicense">License</string>
+    <string name="aboutPlug">www.austinpurtell.com</string>
+    <string name="copyrightHolo">HoloColorPicker © Lars Werkman</string>
+    <string name="aboutAIC">Android Image Cropper</string>
+    <string name="aboutCropper">Android Image Cropper</string>
+    <string name="aboutCropper2">by Arthur Teplitzki</string>
+
+    <!-- Support -->
+    <string name="support">Support the Developer</string>
+    <string name="supportThanks">Thanks for using WallpaperFactory</string>
+    <string name="supportWhy">This app is free with no ads, so if you really like it and want to show your support, it would make me very happy!</string>
+    <string name="supportDonate">Donate</string>
+    <string name="support1">$1</string>
+    <string name="support5">$5</string>
+    <string name="support10">$10</string>
+
+    <string name="seizureWarning">PHOTOSENSITIVE SEIZURE WARNING</string>
+    <string name="seizureWarningText">The combination of some attributes on an object (i.e. large object, high speed, low angle) + can cause flashing, which may be a trigger to those susceptible to photosensitive epilepsy.</string>
+    <string name="warningUnderstand">I understand</string>
+    <string name="clearObjects">This will delete all of your objects forever!</string>
+
+</resources>

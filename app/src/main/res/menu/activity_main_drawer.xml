@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    android:checkableBehavior="single"
+    >
+
+    <group android:id="@+id/home">
+        <item
+            android:id="@+id/nav_Home"
+            android:icon="@drawable/ic_home_24px"
+            android:title="@string/nav_Home" />
+        <!--<item
+            android:id="@+id/nav_Upgrade"
+            android:icon="@drawable/ic_vpn_key_24px"
+            android:title="@string/nav_Upgrade" />-->
+    </group>
+
+    <item android:title="@string/nav_Edit">
+        <menu>
+            <item
+                android:id="@+id/nav_Foreground"
+                android:icon="@drawable/ic_star"
+                android:title="@string/nav_Foreground" />
+            <item
+                android:id="@+id/nav_Background"
+                android:icon="@drawable/ic_bkg"
+                android:title="@string/nav_Background" />
+            <!--<item
+                android:id="@+id/nav_Library"
+                android:icon="@drawable/ic_photolibrary"
+                android:title="@string/nav_Library" />-->
+        </menu>
+    </item>
+
+    <item android:title="@string/nav_More">
+        <menu>
+            <item
+                android:id="@+id/nav_Help"
+                android:icon="@drawable/ic_help_24px"
+                android:title="@string/nav_Help" />
+            <item
+                android:id="@+id/nav_About"
+                android:icon="@drawable/ic_info"
+                android:title="@string/nav_About"/>
+            <item
+                android:id="@+id/nav_Support"
+                android:icon="@drawable/ic_heart_24"
+                android:title="@string/nav_Support" />
+        </menu>
+    </item>
+
+</menu>

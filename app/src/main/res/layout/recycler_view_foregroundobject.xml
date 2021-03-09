@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_marginStart="@dimen/fab_margin"
+    android:layout_marginEnd="@dimen/fab_margin"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:baselineAligned="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/obj_view"
+        android:orientation="horizontal"
+        android:background="@drawable/gradient_foreground_cardview"
+        >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/transparent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/objImgPreview"
+                android:contentDescription="@string/imgDesc"
+                android:layout_margin="8dp"
+                android:layout_height="48dp"
+                android:layout_width="48dp">
+            </ImageView>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/objSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                style="@style/TextStyle"
+                android:textStyle="bold"
+                android:textColor="@color/transparent_white"
+                android:textSize="16sp"
+                android:drawableStart="@drawable/ic_view_in_ar_24px"
+                android:gravity="center"
+                android:drawableTint="@color/red"
+                android:shadowDx="2.0"
+                android:shadowDy="2.0"
+                android:shadowRadius="4.0"
+                android:shadowColor="@color/transparent_black"
+                android:drawablePadding="4dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/objSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                style="@style/TextStyle"
+                android:textStyle="bold"
+                android:textColor="@color/transparent_white"
+                android:textSize="16sp"
+                android:drawableStart="@drawable/ic_double_arrow_24px"
+                android:gravity="center"
+                android:drawableTint="@color/blue"
+                android:shadowDx="2.0"
+                android:shadowDy="2.0"
+                android:shadowRadius="4.0"
+                android:shadowColor="@color/transparent_black"
+                android:drawablePadding="4dp"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/objAngle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                style="@style/TextStyle"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/transparent_white"
+                android:drawableStart="@drawable/ic_square_foot_24px"
+                android:gravity="center"
+                android:drawableTint="@color/green"
+                android:shadowDx="2.0"
+                android:shadowDy="2.0"
+                android:shadowRadius="4.0"
+                android:shadowColor="@color/transparent_black"
+                android:drawablePadding="4dp"
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <CheckBox
+                android:id="@+id/isSelected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:buttonTint="@color/highlight_light"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

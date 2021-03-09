@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/popup_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_black"
+    android:paddingStart="32dp"
+    android:paddingEnd="32dp"
+    android:paddingTop="64dp"
+    android:paddingBottom="64dp">
+
+
+        <LinearLayout
+            android:id="@+id/popup_nested_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/gradient_popup"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/colorTitle"
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:text="@string/setColor"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/colorSubText"
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fab_margin"
+                android:text="@string/colorSubText"
+                android:textColor="@color/highlight"
+                android:textSize="16sp" />
+
+            <com.larswerkman.holocolorpicker.ColorPicker
+                android:id="@+id/picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <com.larswerkman.holocolorpicker.SaturationBar
+                android:id="@+id/saturationbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/fab_margin" />
+
+            <com.larswerkman.holocolorpicker.ValueBar
+                android:id="@+id/valuebar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/fab_margin" />
+
+            <!--<Button
+                android:id="@+id/done_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/fab_margin"
+                android:padding="@dimen/fab_margin"
+                style="@style/TextStyle"
+                android:text="@string/done"
+                android:textAlignment="center"
+                android:textColor="@color/off_white"
+                android:backgroundTint="@color/colorAccent"
+                />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="@dimen/fab_margin"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/cancelButton"
+                    style="@style/buttonStyle"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="@dimen/fab_margin"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/imgDesc"
+                    android:padding="@dimen/fab_margin"
+                    android:tint="@color/white"
+                    android:src="@drawable/ic_arrow_back_24px" />
+
+                <ImageButton
+                    android:id="@+id/done_button"
+                    style="@style/buttonStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/imgDesc"
+                    android:padding="@dimen/fab_margin"
+                    android:tint="@color/white"
+                    android:src="@drawable/ic_save_24px" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/copyright"
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:layout_marginBottom="@dimen/fab_margin"
+                android:text="@string/copyrightHolo"
+                android:textColor="@color/highlight"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#007796</color>
+    <color name="colorPrimaryDark">#004B68</color>
+    <color name="colorPrimaryDarkTransparent">#66004B68</color>
+    <color name="colorAccent">#2299b8</color>
+    <color name="colorAccentTransparent">#882299b8</color>
+    <color name="textColor">#0f0f0f</color>
+    <color name="selected">#55ffffff</color>
+    <color name="heart">#b82256</color>
+    <color name="objectIcon">#66007796</color>
+    <color name="lockedObj">#662299b8</color>
+    <color name="colorAccentVeryTransparent">#222299b8</color>
+
+    <!-- basics -->
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="charcoal">#111111</color>
+    <color name="transparent_black">#aa000000</color>
+    <color name="less_transparent_black">#cc000000</color>
+    <color name="transparent_white">#88ffffff</color>
+    <color name="off_white">#f0f0f0</color>
+    <color name="less_transparent_white">#aaffffff</color>
+
+    <!-- new theme -->
+    <color name="gradientMain">#ff1c1122</color>
+    <!--<color name="gradientMain">#ff342240</color>-->
+    <color name="themeLight">#ff222f40</color>
+    <color name="themeDark">#00000000</color>
+    <color name="button1">#22c7ceea</color>
+    <color name="button2">#44c7ceea</color>
+    <color name="gold_transparent">#22FFD700</color>
+    <color name="yellow">#ffffcb4c</color>
+    <color name="red">#aa8a2847</color>
+    <color name="blue">#aa284c8a</color>
+    <color name="green">#aa288a4f</color>
+    <color name="selectedDefaultColor">#aa2299b8</color>
+    <color name="highlight">#88c7ceea</color>
+    <color name="highlight_light">#aac7ceea</color>
+    <color name="highlight_solid">#ffc7ceea</color>
+</resources>

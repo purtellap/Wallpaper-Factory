@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PxBlurringView">
+        <attr name="blurRadius" format="integer"/>
+        <attr name="downsampleFactor" format="integer"/>
+        <attr name="overlayColor" format="color"/>
+    </declare-styleable>
+
+    <attr name="colorNavigationItem" format="color" />
+    <attr name="colorNavigationItemSelected" format="color" />
+    <attr name="drawableNavigationItemBackground" format="reference" />
+</resources>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        style="@style/fragmentToolbarStyle"
+        android:layout_gravity="center"
+        android:layout_width="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/headerText"
+            style="@style/TextStyle"
+            >
+
+            <ImageView
+                android:id="@+id/blank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/checkbox"
+                android:background="@drawable/ic_info"
+                android:layout_centerInParent="true"
+                android:backgroundTint="@android:color/white"
+                android:visibility="invisible"
+                android:clickable="false"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/headerText"
+            android:text="@string/nav_Background"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/left"
+            app:layout_constraintEnd_toStartOf="@id/right"
+            style="@style/TextStyle"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            />
+
+        <RelativeLayout
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/headerText"
+            style="@style/TextStyle"
+            >
+
+            <CheckBox
+                android:id="@+id/info_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/checkbox"
+                android:button="@drawable/ic_info"
+                android:buttonTint="@color/white"
+                android:layout_centerInParent="true"
+                android:backgroundTint="@color/transparent"
+                />
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/fab_margin"
+        android:baselineAligned="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="100dp"
+                app:layout_constraintStart_toStartOf="@id/backgroundImg"
+                app:layout_constraintEnd_toEndOf="@id/backgroundImg"/>
+
+            <ImageView
+                android:id="@+id/backgroundImg"
+                android:contentDescription="@string/imgDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/previewText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.austinpurtell.wf.extras.GifImageView
+                    android:id="@+id/backgroundGif"
+                    android:contentDescription="@string/imgDesc"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/previewText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <VideoView
+                    android:id="@+id/backgroundVideo"
+                    android:contentDescription="@string/imgDesc"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/previewText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/preview"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textSize="20sp"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:visibility="invisible"
+                android:padding="@dimen/fab_margin"
+                app:layout_constraintTop_toBottomOf="@+id/backgroundImg" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin">
+
+            <Button
+                android:id="@+id/set_color"
+                android:text="@string/setColor"
+                style="@style/buttonStyle"
+                android:paddingTop="@dimen/fab_margin"
+                android:paddingBottom="@dimen/fab_margin"
+                android:layout_marginBottom="@dimen/fab_margin"
+                />
+
+            <Button
+                android:id="@+id/set_image"
+                android:text="@string/setImage"
+                style="@style/buttonStyle"
+                android:paddingTop="@dimen/fab_margin"
+                android:paddingBottom="@dimen/fab_margin"
+                android:layout_marginBottom="@dimen/fab_margin"
+                />
+
+            <Button
+                android:id="@+id/set_gif"
+                android:text="@string/setGif"
+                style="@style/buttonStyle"
+                android:paddingTop="@dimen/fab_margin"
+                android:paddingBottom="@dimen/fab_margin"
+                android:layout_marginBottom="@dimen/fab_margin"
+                />
+
+            <Button
+                android:id="@+id/set_video"
+                android:text="@string/setVideo"
+                style="@style/buttonStyle"
+                android:paddingTop="@dimen/fab_margin"
+                android:paddingBottom="@dimen/fab_margin"
+                />
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/sizeWord"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Scale"
+                    android:textAllCaps="true"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:textAlignment="center"
+                    />
+
+                <TextView
+                    android:id="@+id/sizeText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:textStyle="italic"
+                    android:text="@string/objAngle"
+                    android:textSize="20sp"
+                    android:textColor="@color/textColor"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:textAlignment="center"
+                    />
+
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/sizeSB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                />-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
