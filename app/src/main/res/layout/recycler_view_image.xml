@@ -8,15 +8,17 @@
     app:cardCornerRadius="8dp"
     app:cardElevation="6dp"
     android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/transparent"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/transparent">
 
         <ImageView
             android:id="@+id/libImg"
-            android:background="@drawable/gradient_packs"
+            android:background="@color/transparent"
             android:foreground="?android:attr/selectableItemBackground"
             android:focusable="true"
             android:clickable="true"
@@ -24,7 +26,6 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_heart_24"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintTop_toTopOf="parent"
             />

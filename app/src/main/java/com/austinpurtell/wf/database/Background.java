@@ -106,6 +106,8 @@ public class Background {
                 setGif(r);
             }
             tick();
+
+            canvas.drawColor(Color.argb(0xFF, 0x00, 0x00, 0x00));
             drawGif(canvas, time);
         }
     }

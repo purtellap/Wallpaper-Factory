@@ -16,7 +16,10 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.util.DisplayMetrics;
+
+import androidx.annotation.RequiresApi;
 
 import java.lang.ref.WeakReference;
 
@@ -64,6 +67,7 @@ final class BitmapLoadingWorkerTask extends AsyncTask<Void, Void, BitmapLoadingW
    * @param params ignored
    * @return the decoded bitmap data
    */
+  @RequiresApi(api = Build.VERSION_CODES.N)
   @Override
   protected Result doInBackground(Void... params) {
     try {

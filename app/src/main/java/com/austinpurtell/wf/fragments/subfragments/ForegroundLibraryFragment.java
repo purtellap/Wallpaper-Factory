@@ -234,7 +234,7 @@ public class ForegroundLibraryFragment extends Fragment {
                     setAllowFlipping(true).setAllowRotation(true).
                     setBackgroundColor(0x00000000).
                     setOutputCompressQuality(100).
-                    setOutputCompressFormat(Bitmap.CompressFormat.JPEG).
+                    setOutputCompressFormat(Bitmap.CompressFormat.PNG).
                     setAutoZoomEnabled(true).
                     start(getContext(), this);
             lastCode = MainActivity.REQ_IMG_SQUARE;
@@ -246,7 +246,7 @@ public class ForegroundLibraryFragment extends Fragment {
                     setBackgroundColor(0x00000000).
                     setMultiTouchEnabled(true).
                     setOutputCompressQuality(100).
-                    setOutputCompressFormat(Bitmap.CompressFormat.JPEG).
+                    setOutputCompressFormat(Bitmap.CompressFormat.PNG).
                     setAutoZoomEnabled(true).
                     setCropShape(CropImageView.CropShape.OVAL).
                     start(getContext(), this);
