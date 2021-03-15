@@ -1,5 +1,6 @@
 package com.austinpurtell.wf.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -58,7 +59,7 @@ public class SupportFragment extends Fragment implements PurchasesUpdatedListene
             }};*/
 
         if(billingClient.isReady()){
-            SkuDetailsParams params = SkuDetailsParams.newBuilder().setSkusList(Arrays.asList("$1","$5","$10"))
+            SkuDetailsParams params = SkuDetailsParams.newBuilder().setSkusList(Arrays.asList("dono_1","dono_5","dono_10"))
                     .setType(BillingClient.SkuType.INAPP).build();
             billingClient.querySkuDetailsAsync(params, new SkuDetailsResponseListener() {
                 @Override
@@ -76,18 +77,21 @@ public class SupportFragment extends Fragment implements PurchasesUpdatedListene
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(SupportFragment.this.getActivity(), "Feature coming soon", Toast.LENGTH_SHORT).show();
-                /*if(billingClient.isReady()){
-                    if (v == view.findViewById(R.id.support1)) {
-                        handleBilling(0);
+            //Toast.makeText(SupportFragment.this.getActivity(), "Feature coming soon", Toast.LENGTH_SHORT).show();
+                try {
+                    if (billingClient.isReady()) {
+                        if (v == view.findViewById(R.id.support1)) {
+                            handleBilling(0);
+                        } else if (v == view.findViewById(R.id.support5)) {
+                            handleBilling(1);
+                        } else if (v == view.findViewById(R.id.support10)) {
+                            handleBilling(2);
+                        }
                     }
-                    else if (v == view.findViewById(R.id.support5)){
-                        handleBilling(1);
-                    }
-                    else if (v == view.findViewById(R.id.support10)){
-                        handleBilling(2);
-                    }
-                }*/
+                }
+                catch (Exception e){
+                    Toast.makeText(SupportFragment.this.getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
 
                 //startActivity(new Intent(SupportFragment.this.getActivity(), PurchaseItemActivity.class));
             }
