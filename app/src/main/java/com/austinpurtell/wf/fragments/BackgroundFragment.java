@@ -379,15 +379,18 @@ public class BackgroundFragment extends Fragment {
             super.onPostExecute(aVoid);
 
             final ImageView imageView = (ImageView) view.findViewById(R.id.backgroundImg);
+            final VideoView videoView = (VideoView) view.findViewById(R.id.backgroundVideo);
+            final GifImageView gifImageView = (GifImageView) view.findViewById(R.id.backgroundGif);
+
+            imageView.setVisibility(View.VISIBLE);
+            videoView.setVisibility(View.GONE);
+            gifImageView.setVisibility(View.GONE);
 
             imageView.setImageBitmap(null);
+
             Log.d("bkg", MainActivity.backgroundAdapterBackgrounds.size() +"");
 
             imageView.setBackgroundColor(MainActivity.backgroundAdapterBackgrounds.get(0).getColor());
-            if(MainActivity.backgroundAdapterBackgrounds.get(0).usesImage()){
-                Bitmap b = MainActivity.backgroundAdapterBackgrounds.get(0).makePreviewImage(view.getContext());
-                imageView.setImageBitmap(b);
-            }
 
             Toast.makeText( view.getContext(), view.getContext().getString(R.string.toastBkgSet), Toast.LENGTH_SHORT ).show();
         }

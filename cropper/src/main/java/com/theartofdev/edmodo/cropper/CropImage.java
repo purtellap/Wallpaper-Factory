@@ -38,20 +38,13 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 
 import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-
-/*
-import androidx.annotation.DrawableRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
-import androidx.fragment.app.Fragment;
-*/
 
 /**
  * Helper to simplify crop image work like starting pick-image acitvity and handling camera/gallery
@@ -101,6 +94,8 @@ public final class CropImage {
   /** The result code used to return error from {@link CropImageActivity}. */
   public static final int CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE = 204;
   // endregion
+
+  public static String customFileProvider= "com.theartofdev.edmodo.cropper.genericFileProvider";
 
   private CropImage() {}
 
@@ -188,7 +183,7 @@ public final class CropImage {
       boolean includeDocuments,
       boolean includeCamera) {
 
-    List<Intent> allIntents = new ArrayList<>();
+    /*List<Intent> allIntents = new ArrayList<>();
     PackageManager packageManager = context.getPackageManager();
 
     // collect all camera intents if Camera permission is available
@@ -218,8 +213,12 @@ public final class CropImage {
     // Add all other intents
     chooserIntent.putExtra(
         Intent.EXTRA_INITIAL_INTENTS, allIntents.toArray(new Parcelable[allIntents.size()]));
+*/
+    Intent galleryIntent = new Intent();
+    galleryIntent.setType("image/*");
+    galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
 
-    return chooserIntent;
+    return galleryIntent;
   }
 
   /**
@@ -234,6 +233,8 @@ public final class CropImage {
    */
   public static Intent getCameraIntent(@NonNull Context context, Uri outputFileUri) {
     Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+    /*intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+    intent.setFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);*/
     if (outputFileUri == null) {
       outputFileUri = getCaptureImageOutputUri(context);
     }
@@ -254,6 +255,8 @@ public final class CropImage {
     List<ResolveInfo> listCam = packageManager.queryIntentActivities(captureIntent, 0);
     for (ResolveInfo res : listCam) {
       Intent intent = new Intent(captureIntent);
+      /*intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+      intent.setFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);*/
       intent.setComponent(new ComponentName(res.activityInfo.packageName, res.activityInfo.name));
       intent.setPackage(res.activityInfo.packageName);
       if (outputFileUri != null) {
@@ -269,7 +272,7 @@ public final class CropImage {
    * Get all Gallery intents for getting image from one of the apps of the device that handle
    * images.
    */
-  public static List<Intent> getGalleryIntents(
+  /*public static List<Intent> getGalleryIntents(
       @NonNull PackageManager packageManager, String action, boolean includeDocuments) {
     List<Intent> intents = new ArrayList<>();
     Intent galleryIntent =
@@ -292,6 +295,40 @@ public final class CropImage {
             .getComponent()
             .getClassName()
             .equals("com.android.documentsui.DocumentsActivity")) {
+          intents.remove(intent);
+          break;
+        }
+      }
+    }
+    return intents;
+  }*/
+  public static List<Intent> getGalleryIntents(
+          @NonNull PackageManager packageManager, String action, boolean includeDocuments) {
+    List<Intent> intents = new ArrayList<>();
+    /*Intent galleryIntent =
+            action == Intent.ACTION_GET_CONTENT
+                    ? new Intent(action)
+                    : new Intent(action, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+    galleryIntent.setType("image/*");*/
+    Intent galleryIntent = new Intent();
+    galleryIntent.setType("image/*");
+    galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
+
+    List<ResolveInfo> listGallery = packageManager.queryIntentActivities(galleryIntent, 0);
+    for (ResolveInfo res : listGallery) {
+      Intent intent = new Intent(galleryIntent);
+      intent.setComponent(new ComponentName(res.activityInfo.packageName, res.activityInfo.name));
+      intent.setPackage(res.activityInfo.packageName);
+      intents.add(intent);
+    }
+
+    // remove documents intent
+    if (!includeDocuments) {
+      for (Intent intent : intents) {
+        if (intent
+                .getComponent()
+                .getClassName()
+                .equals("com.android.documentsui.DocumentsActivity")) {
           intents.remove(intent);
           break;
         }
@@ -354,6 +391,19 @@ public final class CropImage {
     }
     return outputFileUri;
   }
+  /*public static Uri getCaptureImageOutputUri(@NonNull Context context) {
+    Uri outputFileUri = null;
+    File folder = context.getExternalCacheDir();
+    File getImage = new File(folder.getPath(), "pickImageResult.jpeg");
+    if (getImage != null) {
+      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+        outputFileUri = FileProvider.getUriForFile(context, customFileProvider, getImage);
+      } else{
+        outputFileUri = Uri.fromFile(getImage);
+      }
+    }
+    return outputFileUri;
+  }*/
 
   /**
    * Get the URI of the selected image from {@link #getPickImageChooserIntent(Context)}.<br>

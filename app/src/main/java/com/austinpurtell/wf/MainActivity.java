@@ -49,6 +49,7 @@ import com.austinpurtell.wf.objects.ForegroundObject;
 import com.austinpurtell.wf.objects.PackObject;
 import com.austinpurtell.wf.objects.Packs;
 import com.austinpurtell.wf.objects.Presets;
+import com.theartofdev.edmodo.cropper.CropImage;
 
 import java.util.ArrayList;
 
@@ -101,6 +102,8 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        CropImage.customFileProvider  = getPackageName() + ".fileprovider";
 
         // gets w/h of screen including navbar
         Display display = getWindowManager().getDefaultDisplay();
