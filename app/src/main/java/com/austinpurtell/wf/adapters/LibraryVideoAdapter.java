@@ -117,7 +117,7 @@ public class LibraryVideoAdapter extends RecyclerView.Adapter<LibraryVideoAdapte
                 holder.textView.getDrawable().setColorFilter(0x77ffffff, PorterDuff.Mode.SRC_ATOP);
                 //holder.textView.setVisibility(View.INVISIBLE);
                 selectedPosition = holder.getAdapterPosition();
-                Log.d("click", "registered");
+                //Log.d("click", "registered");
             }
         });
 
@@ -128,7 +128,7 @@ public class LibraryVideoAdapter extends RecyclerView.Adapter<LibraryVideoAdapte
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
 
         String path = MainActivity.libraryAdapterVideos.get(holder.getAdapterPosition()).getVideoName();
-        Log.d("size", MainActivity.libraryAdapterVideos.size() + "");
+        //Log.d("size", MainActivity.libraryAdapterVideos.size() + "");
 
         holder.textView.setImageDrawable(view.getContext().getDrawable( R.drawable.gradient_videoview));
         holder.videoView.setVideoPath(path);

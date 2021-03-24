@@ -240,7 +240,7 @@ public class MainActivity extends AppCompatActivity
         //navigationView.getMenu().findItem(R.id.nav_Library).setChecked(false);
         navigationView.getMenu().findItem(R.id.nav_Help).setChecked(false);
         navigationView.getMenu().findItem(R.id.nav_About).setChecked(false);
-        navigationView.getMenu().findItem(R.id.nav_Support).setChecked(false);
+        //navigationView.getMenu().findItem(R.id.nav_Support).setChecked(false);
 
         resetArrays();
 
@@ -294,12 +294,12 @@ public class MainActivity extends AppCompatActivity
                 editor.apply();
                 break;
 
-            case R.id.nav_Support:
+            /*case R.id.nav_Support:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new SupportFragment()).addToBackStack(null).commit();
                 editor.putInt(FRAGMENT_PREFS_KEY, ID_SUPPORT);
                 editor.apply();
-                break;
+                break;*/
         }
 
         item.setChecked(true);
@@ -336,11 +336,11 @@ public class MainActivity extends AppCompatActivity
                     new AboutFragment()).addToBackStack(null).commit();
             navigationView.getMenu().findItem(R.id.nav_About).setChecked(true);
         }
-        else if(id == ID_SUPPORT){
+        /*else if(id == ID_SUPPORT){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new SupportFragment()).addToBackStack(null).commit();
             navigationView.getMenu().findItem(R.id.nav_Support).setChecked(true);
-        }
+        }*/
     }
 
     private void resetArrays(){
@@ -407,7 +407,7 @@ public class MainActivity extends AppCompatActivity
                 try {
                     wallpaperManager.clear();
                 } catch (Exception e) {
-                    Log.d("failure", ":(");
+                    //Log.d("failure", ":(");
                 }
             }
 

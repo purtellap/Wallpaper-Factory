@@ -361,7 +361,7 @@ public class BackgroundFragment extends Fragment {
             // Removes background
             ArrayList<Background> bkgs = (ArrayList<Background>) database.backgroundDao().getBackgrounds();
 
-            Log.d("bkgDB size", bkgs.size() + "" );
+            //Log.d("bkgDB size", bkgs.size() + "" );
             for (int i = 0; i < bkgs.size(); i++){
                 database.backgroundDao().removeBackground(bkgs.get(i));
             }
@@ -388,7 +388,7 @@ public class BackgroundFragment extends Fragment {
 
             imageView.setImageBitmap(null);
 
-            Log.d("bkg", MainActivity.backgroundAdapterBackgrounds.size() +"");
+            //Log.d("bkg", MainActivity.backgroundAdapterBackgrounds.size() +"");
 
             imageView.setBackgroundColor(MainActivity.backgroundAdapterBackgrounds.get(0).getColor());
 

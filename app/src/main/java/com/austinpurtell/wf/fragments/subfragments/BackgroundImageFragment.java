@@ -335,7 +335,7 @@ public class BackgroundImageFragment extends Fragment {
                     try{
 
                         File selectedImgFile = new File(getPathFromUri(resultUri));
-                        Log.d("path", selectedImgFile.getAbsolutePath());
+                        //Log.d("path", selectedImgFile.getAbsolutePath());
 
                         Bitmap bitmap = BitmapFactory.decodeFile(selectedImgFile.getAbsolutePath());
 
@@ -392,7 +392,7 @@ public class BackgroundImageFragment extends Fragment {
             // Removes background
             ArrayList<Background> bkgs = (ArrayList<Background>) database.backgroundDao().getBackgrounds();
 
-            Log.d("bkgDB size", bkgs.size() + "" );
+            //Log.d("bkgDB size", bkgs.size() + "" );
             for (int i = 0; i < bkgs.size(); i++){
                 database.backgroundDao().removeBackground(bkgs.get(i));
             }

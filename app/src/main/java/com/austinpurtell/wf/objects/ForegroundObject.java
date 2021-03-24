@@ -244,7 +244,7 @@ public class ForegroundObject {
             bit = BitmapFactory.decodeFile(filepath);
         }
         catch (Exception e){
-            Log.d("Error", e.getMessage());
+            //Log.d("Error", e.getMessage());
         }
         if (bit != null){
             float ar = bit.getHeight()/(float)bit.getWidth();

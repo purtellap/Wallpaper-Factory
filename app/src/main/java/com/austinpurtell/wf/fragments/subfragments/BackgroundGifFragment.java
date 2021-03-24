@@ -247,7 +247,7 @@ public class BackgroundGifFragment extends Fragment {
             if (resultCode == RESULT_OK) {
                 try {
 
-                    Log.d("data type:",getContext().getContentResolver().getType(data.getData()));
+                    //Log.d("data type:",getContext().getContentResolver().getType(data.getData()));
                     String type = getContext().getContentResolver().getType(data.getData());
                     if(type.equals("image/gif")){
 
@@ -272,7 +272,7 @@ public class BackgroundGifFragment extends Fragment {
                         in.close();
                         out.close();
 
-                        Log.d("gif saved to", newfile.getAbsolutePath());
+                        //Log.d("gif saved to", newfile.getAbsolutePath());
 
                         // put path in library list
                         SharedPreferences sharedPref = getActivity().getSharedPreferences(MainActivity.PREFERENCES, Context.MODE_PRIVATE);

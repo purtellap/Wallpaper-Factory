@@ -271,7 +271,7 @@ public class BackgroundVideoFragment extends Fragment {
                     in.close();
                     out.close();
 
-                    Log.d("vid saved to", newfile.getAbsolutePath());
+                    //Log.d("vid saved to", newfile.getAbsolutePath());
 
                     // put path in library list
                     SharedPreferences sharedPref = getActivity().getSharedPreferences(MainActivity.PREFERENCES, Context.MODE_PRIVATE);

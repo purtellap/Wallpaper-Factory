@@ -9,7 +9,6 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.android.vending.BILLING" />
 
-
     <!-- should get rid of the back up stuff before publishing -->
     <application
         tools:ignore="GoogleAppIndexingWarning"

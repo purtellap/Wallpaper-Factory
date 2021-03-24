@@ -79,7 +79,7 @@ public class Presets {
                 return objects;
             }
             else{
-                Log.d("Error","No foreground preset");
+                //Log.d("Error","No foreground preset");
                 return null;
             }
         }
@@ -92,7 +92,7 @@ public class Presets {
                 return new Background(0, Color.argb(0xff, 0x00, 0x00, 0x00));
             }
             else{
-                Log.d("Error","No background preset");
+                //Log.d("Error","No background preset");
                 return null;
             }
         }

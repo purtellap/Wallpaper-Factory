@@ -244,7 +244,7 @@ public class LibraryFragment extends Fragment {
                     try{
 
                         File selectedImgFile = new File(getPathFromUri(resultUri));
-                        Log.d("path", selectedImgFile.getAbsolutePath());
+                        //Log.d("path", selectedImgFile.getAbsolutePath());
 
                         Bitmap bitmap = BitmapFactory.decodeFile(selectedImgFile.getAbsolutePath());
 

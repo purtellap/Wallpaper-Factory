@@ -48,7 +48,7 @@ public class LibraryGif {
             gif = Movie.decodeFile(this.gifName);
             //is.close();
         } catch (Exception e){
-            Log.d("Error", e.getMessage());
+            //Log.d("Error", e.getMessage());
         }
         width = gif.width();
         height = gif.height();

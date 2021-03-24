@@ -78,7 +78,7 @@ public class Packs {
                 this.promoImage = unscaled;
             }
             catch (Exception e){
-                Log.d("Missing some images?", e.getMessage());
+                //Log.d("Missing some images?", e.getMessage());
             }
         }
 

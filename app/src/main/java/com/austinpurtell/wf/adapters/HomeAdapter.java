@@ -105,7 +105,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
         //view.getContext().getAssets().open("assets/default/mp4s/test.mp4");
         String[] paths = MainActivity.presets.get(holder.getAdapterPosition()).getPresetVidPath().split("/");
         holder.videoView.setVideoPath(view.getContext().getDir(MainActivity.FOLDER_PRESET_VIDS, Context.MODE_PRIVATE) + File.separator + paths[paths.length-1]);
-        Log.d("path",view.getContext().getDir(MainActivity.FOLDER_PRESET_VIDS, Context.MODE_PRIVATE) + File.separator + paths[paths.length-1]);
+        //Log.d("path",view.getContext().getDir(MainActivity.FOLDER_PRESET_VIDS, Context.MODE_PRIVATE) + File.separator + paths[paths.length-1]);
 
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -251,7 +251,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
 
             // Background
             ArrayList<Background> bkgs = (ArrayList<Background>) MainActivity.objectDB.backgroundDao().getBackgrounds();
-            Log.d("bkgDB size", bkgs.size() + "" );
+            //Log.d("bkgDB size", bkgs.size() + "" );
             for (int i = 0; i < bkgs.size(); i++){
                 MainActivity.objectDB.backgroundDao().removeBackground(bkgs.get(i));
             }
