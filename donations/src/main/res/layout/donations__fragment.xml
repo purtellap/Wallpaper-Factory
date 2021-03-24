@@ -1,45 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:text="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:id="@+id/popup_layout"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-        <LinearLayout
-            android:id="@+id/donations_activity_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/header"
-            style="@style/fragmentToolbarStyle"
-            android:layout_width="match_parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TextView
-                android:id="@+id/headerText"
-                android:text="@string/support"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                style="@style/TextStyle"
-                android:textColor="@android:color/white"
-                android:textAlignment="center"
-                android:textAllCaps="true"
-                />
-
-        </LinearLayout>
-
-        <!--<androidx.cardview.widget.CardView
+    <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginStart="@dimen/fab_margin"
@@ -77,13 +45,13 @@
                         android:contentDescription="@string/imgDesc"
                         android:src="@drawable/ic_heart_24"
                         app:tint="@color/heart"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="64dp"
+                        android:layout_marginLeft="@dimen/fab_margin"
+                        android:layout_marginRight="@dimen/fab_margin"
                         app:layout_constraintStart_toEndOf="@id/supportThanks"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toTopOf="@id/supportWhy"
-                        />
+                        android:layout_marginStart="16dp" />
 
                     <TextView
                         android:id="@+id/supportWhy"
@@ -117,7 +85,7 @@
                     <Button
                         android:id="@+id/support1"
                         android:layout_width="0dp"
-                        android:drawableStart="@drawable/ic_satisfied_24px"
+                        android:drawableLeft="@drawable/ic_satisfied_24px"
                         android:text="@string/support1"
                         android:padding="@dimen/fab_margin"
                         style="@style/buttonStyle"
@@ -130,7 +98,7 @@
                     <Button
                         android:id="@+id/support5"
                         android:layout_width="0dp"
-                        android:drawableStart="@drawable/ic_mood_24px"
+                        android:drawableLeft="@drawable/ic_mood_24px"
                         android:text="@string/support5"
                         android:padding="@dimen/fab_margin"
                         style="@style/buttonStyle"
@@ -146,7 +114,7 @@
                         android:id="@+id/support10"
                         android:layout_width="0dp"
                         style="@style/buttonStyle"
-                        android:drawableStart="@drawable/ic_very_satisfied_24px"
+                        android:drawableLeft="@drawable/ic_very_satisfied_24px"
                         android:text="@string/support10"
                         android:padding="@dimen/fab_margin"
                         android:drawableTint="@color/highlight_solid"
@@ -157,6 +125,51 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.cardview.widget.CardView>-->
+        </androidx.cardview.widget.CardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="true"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:scrollbars="vertical" >
+
+        &lt;!&ndash;<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/donations__description"
+            android:textAppearance="@android:style/TextAppearance.Small" />&ndash;&gt;
+
+        <ViewStub
+            android:id="@+id/donations__flattr_stub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inflatedId="@+id/donations__flattr"
+            android:layout="@layout/donations__fragment_flattr" />
+
+        <ViewStub
+            android:id="@+id/donations__google_stub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inflatedId="@+id/donations__google"
+            android:layout="@layout/donations__fragment_google" />
+
+        <ViewStub
+            android:id="@+id/donations__paypal_stub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inflatedId="@+id/donations__paypal"
+            android:layout="@layout/donations__fragment_paypal" />
+
+        <ViewStub
+            android:id="@+id/donations__bitcoin_stub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inflatedId="@+id/donations__bitcoin"
+            android:layout="@layout/donations__fragment_bitcoin" />
+
+    </LinearLayout>-->
+
+</ScrollView>

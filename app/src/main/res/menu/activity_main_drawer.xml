@@ -43,10 +43,10 @@
                 android:id="@+id/nav_About"
                 android:icon="@drawable/ic_info"
                 android:title="@string/nav_About"/>
-            <!--<item
+            <item
                 android:id="@+id/nav_Support"
                 android:icon="@drawable/ic_heart_24"
-                android:title="@string/nav_Support" />-->
+                android:title="@string/nav_Support" />
         </menu>
     </item>
 

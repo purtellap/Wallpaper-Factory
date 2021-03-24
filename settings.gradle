@@ -1,1 +1,1 @@
-include ':app', ':quick-start', ':cropper'
+include ':app', ':quick-start', ':cropper', ':donations'
