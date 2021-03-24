@@ -123,6 +123,9 @@
     <!-- Help -->
     <string name="scroll">scroll</string>
     <string name="helpFAQ">FAQ</string>
+    <string name="helpTips">Menu Tips</string>
+    <string name="helpBugs">Bugs?</string>
+    <string name="helpBugsDesc">If you\'ve found some bugs or are having issues with the app, please feel free to contact me at austinpurtell@gmail.com!</string>
     <string name="helpQ1">Why is this app taking up so much space?</string>
     <string name="helpA1">Everything you upload to this app\'s library is stored on your phone, so it will take up more space the more you upload.</string>
     <string name="helpQ2">Why are GIFS taking so long to load?</string>

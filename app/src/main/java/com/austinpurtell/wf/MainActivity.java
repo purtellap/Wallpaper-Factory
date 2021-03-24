@@ -249,7 +249,7 @@ public class MainActivity extends AppCompatActivity
         switch (item.getItemId()) {
             case R.id.nav_Home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new HomeFragment()).addToBackStack(null).commit();
+                        new HomeFragment()).commit();
                 editor.putInt(FRAGMENT_PREFS_KEY, ID_HOME);
                 editor.apply();
                 break;
@@ -261,14 +261,14 @@ public class MainActivity extends AppCompatActivity
                 break;*/
             case R.id.nav_Foreground:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new ForegroundFragment()).addToBackStack(null).commit();
+                        new ForegroundFragment()).commit();
                 editor.putInt(FRAGMENT_PREFS_KEY, ID_FOREGROUND);
                 editor.apply();
                 break;
 
             case R.id.nav_Background:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new BackgroundFragment()).addToBackStack(null).commit();
+                        new BackgroundFragment()).commit();
                 editor.putInt(FRAGMENT_PREFS_KEY, ID_BACKGROUND);
                 editor.apply();
                 break;
@@ -282,14 +282,14 @@ public class MainActivity extends AppCompatActivity
 
             case R.id.nav_Help:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new HelpFragment()).addToBackStack(null).commit();
+                        new HelpFragment()).commit();
                 editor.putInt(FRAGMENT_PREFS_KEY, ID_HELP);
                 editor.apply();
                 break;
 
             case R.id.nav_About:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new AboutFragment()).addToBackStack(null).commit();
+                        new AboutFragment()).commit();
                 editor.putInt(FRAGMENT_PREFS_KEY, ID_ABOUT);
                 editor.apply();
                 break;
@@ -313,27 +313,27 @@ public class MainActivity extends AppCompatActivity
 
         if(id == ID_HOME){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new HomeFragment()).addToBackStack(null).commit();
+                    new HomeFragment()).commit();
             navigationView.getMenu().findItem(R.id.nav_Home).setChecked(true);
         }
         else if(id == ID_FOREGROUND){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new ForegroundFragment()).addToBackStack(null).commit();
+                    new ForegroundFragment()).commit();
             navigationView.getMenu().findItem(R.id.nav_Foreground).setChecked(true);
         }
         else if(id == ID_BACKGROUND){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new BackgroundFragment()).addToBackStack(null).commit();
+                    new BackgroundFragment()).commit();
             navigationView.getMenu().findItem(R.id.nav_Background).setChecked(true);
         }
         else if(id == ID_HELP){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new HelpFragment()).addToBackStack(null).commit();
+                    new HelpFragment()).commit();
             navigationView.getMenu().findItem(R.id.nav_Help).setChecked(true);
         }
         else if(id == ID_ABOUT){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new AboutFragment()).addToBackStack(null).commit();
+                    new AboutFragment()).commit();
             navigationView.getMenu().findItem(R.id.nav_About).setChecked(true);
         }
         /*else if(id == ID_SUPPORT){

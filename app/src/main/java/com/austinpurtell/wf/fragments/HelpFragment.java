@@ -68,10 +68,10 @@ public class HelpFragment extends Fragment {
             ImageView imageView1 = view.findViewById(R.id.help1);
             imageView1.setImageBitmap(bitmaps.get(0));
 
-            LinearLayout faqLayout = view.findViewById(R.id.faq);
+            /*LinearLayout faqLayout = view.findViewById(R.id.faq);
             ViewGroup.LayoutParams lp = faqLayout.getLayoutParams();
             lp.width = (int)(MainActivity.WIDTH * 0.7f);
-            faqLayout.setLayoutParams(lp);
+            faqLayout.setLayoutParams(lp);*/
             /*ImageView imageView2 = view.findViewById(R.id.help2);
             imageView2.setImageBitmap(bitmaps.get(1));
             ImageView imageView3 = view.findViewById(R.id.help3);

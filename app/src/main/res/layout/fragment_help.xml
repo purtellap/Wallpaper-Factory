@@ -39,23 +39,34 @@
             app:cardElevation="6dp"
             android:backgroundTint="@color/black">
 
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
+            <ScrollView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/gradient_packs"
-                android:scrollbars="horizontal"
+                android:scrollbars="vertical"
                 >
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="@string/helpTips"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextStyle"
+                        android:textSize="32sp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/red"
+                        android:layout_margin="@dimen/fab_margin"
+                        android:textStyle="bold"/>
 
                     <ImageView
                         android:id="@+id/help1"
                         android:contentDescription="@string/imgDesc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
                         android:layout_marginStart="@dimen/fab_margin"
                         android:layout_marginTop="@dimen/fab_margin"
@@ -65,8 +76,8 @@
 
                     <LinearLayout
                         android:id="@+id/faq"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:layout_margin="@dimen/fab_margin"
                         android:orientation="vertical"
@@ -79,7 +90,7 @@
                             style="@style/TextStyle"
                             android:textSize="32sp"
                             android:textAlignment="viewStart"
-                            android:textColor="@color/white"
+                            android:textColor="@color/blue"
                             android:layout_marginTop="@dimen/fab_margin"
                             android:layout_marginBottom="@dimen/fab_margin"
                             android:textStyle="bold"/>
@@ -122,6 +133,29 @@
                             android:textColor="@color/highlight_light"
                             android:layout_margin="@dimen/fab_margin"/>
 
+                        <TextView
+                            android:text="@string/helpBugs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/TextStyle"
+                            android:textSize="32sp"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/green"
+                            android:layout_marginTop="@dimen/fab_margin"
+                            android:layout_marginBottom="@dimen/fab_margin"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:text="@string/helpBugsDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/TextStyle"
+                            android:textAlignment="viewStart"
+                            android:textSize="16sp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/highlight_light"
+                            android:layout_margin="@dimen/fab_margin"/>
+
                     </LinearLayout>
 
                     <!--<ImageView
@@ -144,13 +178,11 @@
 
                 </LinearLayout>
 
-
-            </HorizontalScrollView>
-
+            </ScrollView>
 
         </androidx.cardview.widget.CardView>
 
-       <TextView
+       <!--<TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:gravity="center"
@@ -164,7 +196,7 @@
            android:layout_centerHorizontal="true"
            android:layout_alignParentBottom="true"
            android:layout_margin="@dimen/fab_margin"
-           />
+           />-->
 
 
 
