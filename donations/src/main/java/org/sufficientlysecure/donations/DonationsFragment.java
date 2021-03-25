@@ -269,9 +269,7 @@ public class DonationsFragment extends Fragment {
                     } catch (IllegalStateException e) {     // In some devices, it is impossible to setup IAB Helper
                         if (mDebug)                         // and this exception is thrown, being almost "impossible"
                             Log.e(TAG, e.getMessage());     // to the user to control it and forcing app close.
-                        openDialog(android.R.drawable.ic_dialog_alert,
-                                R.string.donations__google_android_market_not_supported_title,
-                                getString(R.string.donations__google_android_market_not_supported));
+                        Toast.makeText(v.getContext(), "Something went wrong :(", Toast.LENGTH_SHORT).show();
                     }
                 }
             };
@@ -303,8 +301,7 @@ public class DonationsFragment extends Fragment {
                         Log.d(TAG, "Setup finished.");
 
                     if (!result.isSuccess()) {
-                        openDialog(android.R.drawable.ic_dialog_alert, R.string.donations__google_android_market_not_supported_title,
-                                getString(R.string.donations__google_android_market_not_supported));
+                        Toast.makeText(getContext(), "Something went wrong :(", Toast.LENGTH_SHORT).show();
                         return;
                     }
 
@@ -357,12 +354,13 @@ public class DonationsFragment extends Fragment {
     // Callback for when a purchase is finished
     IabHelper.OnIabPurchaseFinishedListener mPurchaseFinishedListener = new IabHelper.OnIabPurchaseFinishedListener() {
         public void onIabPurchaseFinished(IabResult result, Purchase purchase) {
-            if (mDebug)
+            if (mDebug) {
                 Log.d(TAG, "Purchase finished: " + result + ", purchase: " + purchase);
-
+            }
             // if we were disposed of in the meantime, quit.
             if (mHelper == null) return;
 
+            Log.d("---result---", result.isSuccess() + "");
             if (result.isSuccess()) {
                 if (mDebug)
                     Log.d(TAG, "Purchase successful.");

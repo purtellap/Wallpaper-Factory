@@ -1,9 +1,3 @@
-com/theartofdev/edmodo/cropper/BuildConfig.java
- com.theartofdev.edmodo.cropper.BuildConfig
-com/theartofdev/edmodo/cropper/BitmapUtils.java
- com.theartofdev.edmodo.cropper.BitmapUtils
- com.theartofdev.edmodo.cropper.BitmapUtils$BitmapSampled
- com.theartofdev.edmodo.cropper.BitmapUtils$RotateBitmapResult
 com/theartofdev/edmodo/cropper/CropOverlayView.java
  com.theartofdev.edmodo.cropper.CropOverlayView
  com.theartofdev.edmodo.cropper.CropOverlayView$1
@@ -38,6 +32,12 @@ com/theartofdev/edmodo/cropper/CropImageOptions.java
  com.theartofdev.edmodo.cropper.CropImageOptions$1
 com/theartofdev/edmodo/cropper/CropImageAnimation.java
  com.theartofdev.edmodo.cropper.CropImageAnimation
+com/theartofdev/edmodo/cropper/BitmapUtils.java
+ com.theartofdev.edmodo.cropper.BitmapUtils
+ com.theartofdev.edmodo.cropper.BitmapUtils$BitmapSampled
+ com.theartofdev.edmodo.cropper.BitmapUtils$RotateBitmapResult
+com/theartofdev/edmodo/cropper/BuildConfig.java
+ com.theartofdev.edmodo.cropper.BuildConfig
 com/theartofdev/edmodo/cropper/BitmapLoadingWorkerTask.java
  com.theartofdev.edmodo.cropper.BitmapLoadingWorkerTask
  com.theartofdev.edmodo.cropper.BitmapLoadingWorkerTask$Result

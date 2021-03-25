@@ -2,12 +2,12 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="64dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.cardview.widget.CardView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginStart="@dimen/fab_margin"
@@ -45,13 +45,12 @@
                         android:contentDescription="@string/imgDesc"
                         android:src="@drawable/ic_heart_24"
                         app:tint="@color/heart"
-                        android:layout_marginLeft="@dimen/fab_margin"
-                        android:layout_marginRight="@dimen/fab_margin"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginRight="32dp"
                         app:layout_constraintStart_toEndOf="@id/supportThanks"
-                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/supportWhy"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toTopOf="@id/supportWhy"
-                        android:layout_marginStart="16dp" />
+                        app:layout_constraintBottom_toTopOf="@id/supportWhy" />
 
                     <TextView
                         android:id="@+id/supportWhy"
