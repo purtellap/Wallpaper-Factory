@@ -45,6 +45,16 @@ public class AboutFragment extends Fragment {
         @Override
         protected Void doInBackground(Void... voids) {
 
+            View.OnClickListener apacheListener = new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent intent = new Intent();
+                    intent.setAction(Intent.ACTION_VIEW);
+                    intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                    intent.setData(Uri.parse("http://www.apache.org/licenses/LICENSE-2.0"));
+                    view.getContext().startActivity(intent);
+                }
+            };
+
             Button cropperLink = (Button) view.findViewById(R.id.cropperLink);
             cropperLink.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -56,15 +66,7 @@ public class AboutFragment extends Fragment {
                 }
             });
             Button cropperApacheLink = (Button) view.findViewById(R.id.cropperApacheLink);
-            cropperApacheLink.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent intent = new Intent();
-                    intent.setAction(Intent.ACTION_VIEW);
-                    intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                    intent.setData(Uri.parse("http://www.apache.org/licenses/LICENSE-2.0"));
-                    view.getContext().startActivity(intent);
-                }
-            });
+            cropperApacheLink.setOnClickListener(apacheListener);
 
             Button holoLink = (Button) view.findViewById(R.id.holoLink);
             holoLink.setOnClickListener(new View.OnClickListener() {
@@ -77,15 +79,20 @@ public class AboutFragment extends Fragment {
                 }
             });
             Button holoApacheLink = (Button) view.findViewById(R.id.holoApacheLink);
-            holoApacheLink.setOnClickListener(new View.OnClickListener() {
+            holoApacheLink.setOnClickListener(apacheListener);
+
+            Button donoLink = (Button) view.findViewById(R.id.donoLink);
+            donoLink.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Intent intent = new Intent();
                     intent.setAction(Intent.ACTION_VIEW);
                     intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                    intent.setData(Uri.parse("http://www.apache.org/licenses/LICENSE-2.0"));
+                    intent.setData(Uri.parse("https://github.com/SufficientlySecure/donations"));
                     view.getContext().startActivity(intent);
                 }
             });
+            Button donoApacheLink = (Button) view.findViewById(R.id.donoApacheLink);
+            donoApacheLink.setOnClickListener(apacheListener);
 
             return null;
         }

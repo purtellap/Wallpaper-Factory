@@ -33,7 +33,7 @@ public class SupportFragment2 extends Fragment {
 
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
         DonationsFragment donationsFragment;
-        donationsFragment = DonationsFragment.newInstance(false, true, GOOGLE_PUBKEY, GOOGLE_CATALOG,
+        donationsFragment = DonationsFragment.newInstance(true, true, GOOGLE_PUBKEY, GOOGLE_CATALOG,
                 getResources().getStringArray(R.array.donation_google_catalog_values), false, null, null,
                 null, false, null, null, false, null);
 

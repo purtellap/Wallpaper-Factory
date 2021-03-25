@@ -369,8 +369,9 @@ public class DonationsFragment extends Fragment {
                 mHelper.consumeAsync(purchase, mConsumeFinishedListener);
 
                 // show thanks openDialog
-                openDialog(android.R.drawable.ic_dialog_info, R.string.donations__thanks_dialog_title,
-                        getString(R.string.donations__thanks_dialog));
+                Toast.makeText(getContext(), "Thank you for donating!", Toast.LENGTH_SHORT).show();
+                /*openDialog(android.R.drawable.ic_dialog_info, R.string.donations__thanks_dialog_title,
+                        getString(R.string.donations__thanks_dialog));*/
             }
         }
     };

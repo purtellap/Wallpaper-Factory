@@ -148,6 +148,9 @@
     <string name="aboutAIC">Android Image Cropper</string>
     <string name="aboutCropper">Android Image Cropper</string>
     <string name="aboutCropper2">by Arthur Teplitzki</string>
+    <string name="aboutDono">Android Donations Lib</string>
+    <string name="aboutDono2">by SufficientlySecure</string>
+    <string name="aboutApache">All software licensed under Apache License Version 2.0</string>
 
     <!-- Support -->
     <string name="support">Support the Developer</string>

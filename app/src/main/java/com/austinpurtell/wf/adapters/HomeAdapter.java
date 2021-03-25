@@ -1,12 +1,17 @@
 package com.austinpurtell.wf.adapters;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.content.res.AssetFileDescriptor;
 import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SimpleItemAnimator;
 import android.util.Log;
@@ -30,6 +35,8 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
+
+import static com.austinpurtell.wf.MainActivity.REQ_WP;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> {
 
@@ -271,9 +278,15 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
         protected void onPostExecute(Void voids) {
             super.onPostExecute(voids);
 
-            MainActivity.launchWPServiceAsync async = new MainActivity.launchWPServiceAsync(view.getContext(),
-                    MainActivity.objectDB);
-            async.execute();
+            int permissionCheck = ContextCompat.checkSelfPermission(view.getContext(), Manifest.permission.READ_EXTERNAL_STORAGE);
+            if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions((Activity) view.getContext(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQ_WP);
+            }
+            else{
+                MainActivity.launchWPServiceAsync async = new MainActivity.launchWPServiceAsync(view.getContext(),
+                        MainActivity.objectDB);
+                async.execute();
+            }
 
         }
     }
