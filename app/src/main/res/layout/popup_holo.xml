@@ -5,12 +5,12 @@
     android:orientation="vertical"
     android:id="@+id/popup_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/transparent_black"
     android:paddingStart="32dp"
     android:paddingEnd="32dp"
-    android:paddingTop="64dp"
-    android:paddingBottom="64dp">
+    android:paddingTop="@dimen/fab_margin"
+    android:paddingBottom="@dimen/fab_margin">
 
 
         <LinearLayout
